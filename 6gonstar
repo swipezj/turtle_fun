@@ -1,0 +1,19 @@
+import turtle as t
+import random
+t.speed(0)
+t.bgcolor("black")
+t.color("white")
+t.pencolor("white")
+t.colormode(255)
+n = 120
+for j in range(6):
+    for i in range(n):
+        t.forward(n - i)
+        t.left(60 * ((i % 2) + 1))
+        t.color((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+    t.penup()
+    t.home()
+    t.pendown()
+    t.right(60 * (j+1))
+t.exitonclick()
+t.hideturtle()
